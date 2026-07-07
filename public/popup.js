@@ -1,7 +1,8 @@
-document.addEventListener("DOMContentLoaded", () => {
+(() => {
   const dropZone = document.getElementById("drop-zone");
   const browseBtn = document.getElementById("browse-btn");
   const fileInput = document.getElementById("file-input");
+
 
   const uploadContent = document.getElementById("upload-content");
   const processingState = document.getElementById("processing-state");
@@ -45,23 +46,26 @@ document.addEventListener("DOMContentLoaded", () => {
     dropZone.classList.remove("dragover");
   });
 
-  dropZone.addEventListener("drop", (e) => {
-    e.preventDefault();
-    dropZone.classList.remove("dragover");
-    if (e.dataTransfer.files && e.dataTransfer.files.length > 0) {
-      handleFile(e.dataTransfer.files[0]);
-    }
-  });
+ 
+dropZone.addEventListener("drop", (e) => {
+  e.preventDefault();
+  dropZone.classList.remove("dragover");
+  if (e.dataTransfer.files && e.dataTransfer.files.length > 0) {
+    handleFile(e.dataTransfer.files[0]);
+  }
+});
 
-  browseBtn.addEventListener("click", () => {
-    fileInput.click();
-  });
+browseBtn.addEventListener("click", () => {
+  console.log("Browse clicked");
+  fileInput.click();
+});
 
-  fileInput.addEventListener("change", (e) => {
-    if (e.target.files && e.target.files.length > 0) {
-      handleFile(e.target.files[0]);
-    }
-  });
+fileInput.addEventListener("change", (e) => {
+  if (e.target.files && e.target.files.length > 0) {
+    handleFile(e.target.files[0]);
+  }
+});
+
 
   async function handleFile(file) {
     if (isProcessing) return;
@@ -201,9 +205,10 @@ function triggerDownload(url, filename) {
   document.body.removeChild(link);
 }
 
-  downloadBtn.addEventListener("click", () => {
-    if (processedVideoUrl) {
-      triggerDownload(processedVideoUrl, "krypton_processed.mp4");
-    }
-  });
+downloadBtn.addEventListener("click", () => {
+  if (processedVideoUrl) {
+    triggerDownload(processedVideoUrl, "krypton_processed.mp4");
+  }
 });
+
+})();
