@@ -1,7 +1,14 @@
 (() => {
+  window.addEventListener("DOMContentLoaded", () => {
+
   const dropZone = document.getElementById("drop-zone");
   const browseBtn = document.getElementById("browse-btn");
   const fileInput = document.getElementById("file-input");
+
+  if (!dropZone || !browseBtn || !fileInput) {
+    console.error("Upload elements missing");
+    return;
+  };
 
 const resolutionEl = document.getElementById("resolution");
 const fpsEl = document.getElementById("fps");
