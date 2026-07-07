@@ -113,9 +113,9 @@ fileInput.addEventListener("change", (e) => {
         "-c:v", "copy",
         "-c:a", "copy",
         "-movflags", "+faststart",
-        "-metadata", "artist=kryptonaep.it",
-        "-metadata", `comment=Patched by method.kryptonaep.it - ${patchId}`,
-        "-metadata", "copyright=kryptonaep.it",
+        "-metadata", "artist=adamishh.com",
+        "-metadata", `comment=Patched by adamishh.com - ${patchId}`,
+        "-metadata", "copyright=adamishh.com",
         "-metadata:s:v:0", "language=und",
         "-metadata:s:v:0", "handler_name=VideoHandler",
         "-metadata:s:a:0", "language=und",
@@ -147,7 +147,7 @@ fileInput.addEventListener("change", (e) => {
       successState.classList.remove("hidden");
       window.KryptonSFX?.play("success");
 
-      triggerDownload(processedVideoUrl, `krypton_${file.name}`);
+      triggerDownload(processedVideoUrl, `adamish_${file.name}`);
       isProcessing = false;
     } catch (error) {
       console.error(error);
@@ -207,7 +207,7 @@ function triggerDownload(url, filename) {
 
 downloadBtn.addEventListener("click", () => {
   if (processedVideoUrl) {
-    triggerDownload(processedVideoUrl, "krypton_processed.mp4");
+    triggerDownload(processedVideoUrl, "adamish_processed.mp4");
   }
 });
 
