@@ -128,6 +128,7 @@ export default function Home() {
 <Script
   src="/mp4-container-patcher.js"
   strategy="afterInteractive"
+  onLoad={() => console.log("MP4 patcher loaded", window.KryptonMp4Patcher)}
 />
 
 <Script
