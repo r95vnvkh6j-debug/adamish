@@ -84,9 +84,24 @@ tempVideo.preload = "metadata";
 tempVideo.onloadedmetadata = () => {
   resolutionEl.textContent =
     `${tempVideo.videoWidth} × ${tempVideo.videoHeight}`;
+
+  const bitrate =
+    (
+      (file.size * 8) /
+      tempVideo.duration /
+      1000000
+    ).toFixed(2);
+
+  bitrateEl.textContent =
+    `${bitrate} Mbps`;
 };
 
 tempVideo.src = URL.createObjectURL(file);
+fpsEl.textContent = "-";
+codecEl.textContent = "-";
+hdrEl.textContent = "-";
+
+    
     if (isProcessing) return;
 
     if (!file.type.startsWith("video/")) {
@@ -121,65 +136,7 @@ tempVideo.src = URL.createObjectURL(file);
       setProgress(8, "Reading video info...");
       const inputBytes = new Uint8Array(await file.arrayBuffer());
       await replaceFile("input.mp4", inputBytes);
-      const probeOutput = await ffmpeg.ffprobe([
-  "-v",
-  "error",
-  "-select_streams",
-  "v:0",
-  "-show_entries",
-  "stream=r_frame_rate,codec_name,color_transfer,bit_rate",
-  "-of",
-  "default=noprint_wrappers=1",
-  "input.mp4",
-]);
-
-const probeText =
-  typeof probeOutput === "string"
-    ? probeOutput
-    : new TextDecoder().decode(probeOutput);
-
-const fpsMatch =
-  probeText.match(/r_frame_rate=(\d+)\/(\d+)/);
-
-if (fpsMatch) {
-  const fps =
-    (
-      parseInt(fpsMatch[1]) /
-      parseInt(fpsMatch[2])
-    ).toFixed(2);
-
-  fpsEl.textContent = fps;
-}
-
-const codecMatch =
-  probeText.match(/codec_name=(.+)/);
-
-if (codecMatch) {
-  codecEl.textContent =
-    codecMatch[1].toUpperCase();
-}
-
-const bitrateMatch =
-  probeText.match(/bit_rate=(\d+)/);
-
-if (bitrateMatch) {
-  const mbps =
-    (
-      parseInt(bitrateMatch[1]) /
-      1000000
-    ).toFixed(2);
-
-  bitrateEl.textContent =
-    `${mbps} Mbps`;
-}
-
-const hdrMatch =
-  probeText.match(
-    /color_transfer=(smpte2084|arib-std-b67)/i
-  );
-
-hdrEl.textContent =
-  hdrMatch ? "Yes" : "No";
+      
 
       const patchId = createPatchId();
       const command = [
