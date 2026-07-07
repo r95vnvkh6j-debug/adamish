@@ -79,32 +79,31 @@ export default function Home() {
           <span>Community</span>
         </div>
 
-    <div className="nav-buttons">
-  <a
-    href="https://www.tiktok.com/@adamishh"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="btn-pill btn-glass tilt"
-  >
-    <span>TikTok</span>
-  </a>
+        <div className="nav-buttons">
+          <a
+            href="https://www.tiktok.com/@adamishh"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-pill btn-glass tilt"
+          >
+            <span>TikTok</span>
+          </a>
 
-  <a
-    href="https://span>
-  </a>
-</div>
+          https://discord.gg/9Wf9CVXWmr
+            <span>Discord</span>
+          </a>
+        </div>
+      </div>
 
       /ffmpeg/ffmpeg.jsmp4-container-patcher.js"
         strategy="afterInteractive"
       />
 
-      <Script
-        src="/sfx.js"
-        strategy="afterInteractive"
+      /sfx.js        strategy="afterInteractive"
       />
 
-      <Script
-        ctive"
+      popup.js"
+        strategy="afterInteractive"
       />
     </>
   );
