@@ -11,7 +11,7 @@ export default function Home() {
 
       <div className="container">
         <header>
-          <p className="wordmark">Krypton</p>
+          <p className="wordmark">Adamishh</p>
 
           <h1>
             No More Compression
