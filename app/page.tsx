@@ -11,7 +11,7 @@ export default function Home() {
 
       <div className="container">
         <header>
-          <p className="wordmark">Krypton</p>
+          <p className="wordmark">Adamish</p>
 
           <h1>
             No More Compression
@@ -57,11 +57,13 @@ export default function Home() {
               <div
                 id="progress-bar"
                 className="progress-bar"
-              />
+              ></div>
             </div>
           </div>
 
           <div id="success-state" className="hidden">
+            <div className="success-icon">✅</div>
+
             <h3>Processing Complete</h3>
 
             <button
@@ -78,13 +80,28 @@ export default function Home() {
         </div>
 
         <div className="nav-buttons">
-         
+          https://tiktok.com
+            TikTok
+          </a>
 
-          
+          https://discord.gg
+            Discord
+          </a>
         </div>
       </div>
 
-      /ffmpeg/ffmpeg.js <body>{children}</body>
-    </html>
+      /ffmpeg/ffmpeg.jsmp4-container-patcher.js"
+        strategy="afterInteractive"
+      />
+
+      <Script
+        src="/sfx.js"
+        strategy="afterInteractive"
+      />
+
+      <Script
+        ctive"
+      />
+    </>
   );
 }
