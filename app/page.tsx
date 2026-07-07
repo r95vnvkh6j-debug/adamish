@@ -20,10 +20,7 @@ export default function Home() {
           </h1>
         </header>
 
-        <div
-          className="glass-panel upload-zone tilt"
-          id="drop-zone"
-        >
+        <div className="glass-panel upload-zone tilt" id="drop-zone">
           <div id="upload-content">
             <div className="upload-icon">📤</div>
 
@@ -80,8 +77,7 @@ export default function Home() {
         </div>
 
         <div className="nav-buttons">
-          <a
-            href="https://www.tiktok.com/@adamishh"
+          https://www.tiktok.com/@adamishh"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-pill btn-glass tilt"
@@ -89,8 +85,7 @@ export default function Home() {
             <span>TikTok</span>
           </a>
 
-          <a
-            href="https://discord.gg/9Wf9CVXWmr"
+          9Wf9CVXWmr"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-pill btn-glass tilt"
@@ -100,9 +95,18 @@ export default function Home() {
         </div>
       </div>
 
-      /ffmpeg/ffmpeg.js      /mp4-container-patcher.jsfx.js"
+      ffmpeg/ffmpeg.js"
         strategy="afterInteractive"
       />
 
-      /interactions.js      /popup.js  );
-}
+      /mp4-container-patcher.jsfx.js"
+        strategy="afterInteractive"
+      />
+
+      /interactions.js      /popup.js. Spara
+2. Commit
+3. Push
+4. Redeploy
+
+Detta är första gången i chatten som `page.tsx` är komplett med korrekta `<Script />`-taggar.
+
