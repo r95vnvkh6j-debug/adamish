@@ -79,16 +79,20 @@ export default function Home() {
           <span>Community</span>
         </div>
 
-        <div className="nav-buttons">
-          https://tiktok.com
-            TikTok
-          </a>
+    <div className="nav-buttons">
+  <a
+    href="https://www.tiktok.com/@adamishh"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="btn-pill btn-glass tilt"
+  >
+    <span>TikTok</span>
+  </a>
 
-          https://discord.gg
-            Discord
-          </a>
-        </div>
-      </div>
+  <a
+    href="https://span>
+  </a>
+</div>
 
       /ffmpeg/ffmpeg.jsmp4-container-patcher.js"
         strategy="afterInteractive"
