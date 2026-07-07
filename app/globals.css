@@ -29,7 +29,7 @@ body {
   background: var(--bg);
   color: var(--white);
   font-family: 'Inter', sans-serif;
-  overflow: hidden;
+  overflow: auto;
   position: relative;
   cursor: default;
 }
@@ -460,5 +460,90 @@ header h1 {
 
   .glass-panel {
     padding: 40px;
+  }
+}
+
+/* ==========================
+   Video Information
+========================== */
+
+.video-info {
+  margin-top: 8px;
+  padding: 24px;
+}
+
+.video-info h3 {
+  margin: 0 0 18px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--white);
+  text-align: left;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.info-item {
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 14px;
+  transition:
+    transform 0.3s var(--ease-fluid),
+    background 0.3s var(--ease-out),
+    border-color 0.3s var(--ease-out);
+}
+
+.info-item:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.07);
+  border-color: var(--border-hover);
+}
+
+.info-item span {
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.info-item strong {
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--white);
+  word-break: break-word;
+}
+
+@media (min-width: 1024px) {
+  .video-info {
+    padding: 32px;
+  }
+
+  .video-info h3 {
+    font-size: 20px;
+    margin-bottom: 24px;
+  }
+
+  .info-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+
+  .info-item {
+    padding: 18px;
+  }
+
+  .info-item span {
+    font-size: 12px;
+  }
+
+  .info-item strong {
+    font-size: 18px;
   }
 }
