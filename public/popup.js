@@ -247,10 +247,11 @@ function triggerDownload(url, filename) {
   document.body.removeChild(link);
 }
 
-downloadBtn.addEventListener("click", () => {
+downloadBtn?.addEventListener("click", () => {
   if (processedVideoUrl) {
     triggerDownload(processedVideoUrl, "adamish_processed.mp4");
   }
 });
 
+  });
 })();
