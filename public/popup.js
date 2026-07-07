@@ -1,5 +1,5 @@
 (() => {
-  window.addEventListener("DOMContentLoaded", () => {
+ 
 
   const dropZone = document.getElementById("drop-zone");
   const browseBtn = document.getElementById("browse-btn");
@@ -255,5 +255,4 @@ downloadBtn?.addEventListener("click", () => {
   }
 });
 
-  });
 })();
