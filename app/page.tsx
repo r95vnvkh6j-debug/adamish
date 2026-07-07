@@ -20,10 +20,7 @@ export default function Home() {
           </h1>
         </header>
 
-        <div
-          className="glass-panel upload-zone tilt"
-          id="drop-zone"
-        >
+        <div className="glass-panel upload-zone tilt" id="drop-zone">
           <div id="upload-content">
             <div className="upload-icon">📤</div>
 
@@ -31,10 +28,7 @@ export default function Home() {
 
             <p>or</p>
 
-            <button
-              className="btn-pill btn-primary"
-              id="browse-btn"
-            >
+            <button className="btn-pill btn-primary" id="browse-btn">
               <span>Browse Files</span>
             </button>
 
@@ -80,8 +74,7 @@ export default function Home() {
         </div>
 
         <div className="nav-buttons">
-          <a
-            href="https://www.tiktok.com/@adamishh"
+          https://www.tiktok.com/@adamishh"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-pill btn-glass tilt"
@@ -89,20 +82,28 @@ export default function Home() {
             <span>TikTok</span>
           </a>
 
-          https://discord.gg/9Wf9CVXWmr
+          9Wf9CVXWmr"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-pill btn-glass tilt"
+          >
             <span>Discord</span>
           </a>
         </div>
       </div>
 
-      /ffmpeg/ffmpeg.jsmp4-container-patcher.js"
+      ffmpeg/ffmpeg.js"
         strategy="afterInteractive"
       />
 
-      /sfx.js        strategy="afterInteractive"
+      /mp4-container-patcher.js="/sfx.js"
+        strategy="afterInteractive"
       />
 
-      popup.js"
+      /interactions.js strategy="afterInteractive"
+      />
+
+      .js"
         strategy="afterInteractive"
       />
     </>
