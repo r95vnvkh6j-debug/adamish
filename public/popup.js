@@ -28,9 +28,12 @@ const filesizeEl = document.getElementById("filesize");
   let lastSfxTickPercent = -10;
   let isProcessing = false;
 
-  if (!window.FFmpegWASM) {
-    console.error("FFmpegWASM global not found. ffmpeg/ffmpeg.js did not load.");
-  }
+if (!window.FFmpegWASM) {
+  console.error("FFmpegWASM global not found. ffmpeg/ffmpeg.js did not load.");
+  return;
+}
+
+const { FFmpeg } = window.FFmpegWASM;
 
   const { FFmpeg } = window.FFmpegWASM || {};
   const ffmpeg = FFmpeg ? new FFmpeg() : null;
