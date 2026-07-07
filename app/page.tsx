@@ -119,8 +119,13 @@ export default function Home() {
         </div>
       </div>
 
-      <Script
+  <Script
         src="/ffmpeg/ffmpeg.js"
+        strategy="afterInteractive"
+      />
+
+      <Script
+        src="/popup.js"
         strategy="afterInteractive"
       />
     </>
