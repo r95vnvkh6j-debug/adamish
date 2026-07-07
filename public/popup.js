@@ -71,7 +71,7 @@ dropZone.addEventListener("drop", (e) => {
   }
 });
 
-browseBtn.addEventListener("click", () => {
+browseBtn?.addEventListener("click", () => {
   console.log("Browse clicked");
   fileInput.click();
 });
