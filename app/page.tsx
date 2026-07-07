@@ -120,13 +120,13 @@ export default function Home() {
         </div>
       </div>
 
- <Script
+<Script
   src="/ffmpeg/ffmpeg.js"
   strategy="afterInteractive"
 />
 
 <Script
-  src="/krypton-mp4-patcher.js"
+  src="/mp4-container-patcher.js"
   strategy="afterInteractive"
 />
 
@@ -134,7 +134,6 @@ export default function Home() {
   src="/popup.js"
   strategy="afterInteractive"
 />
-      
     </>
   );
 }
