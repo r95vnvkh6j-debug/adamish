@@ -20,15 +20,21 @@ export default function Home() {
           </h1>
         </header>
 
-        <div className="glass-panel upload-zone tilt" id="drop-zone">
+        <div
+          className="glass-panel upload-zone tilt"
+          id="drop-zone"
+        >
           <div id="upload-content">
             <div className="upload-icon">📤</div>
 
-            <h3>Drag & drop your video</h3>
+            <h3>Drag &amp; drop your video</h3>
 
             <p>or</p>
 
-            <button className="btn-pill btn-primary" id="browse-btn">
+            <button
+              className="btn-pill btn-primary"
+              id="browse-btn"
+            >
               <span>Browse Files</span>
             </button>
 
@@ -74,7 +80,8 @@ export default function Home() {
         </div>
 
         <div className="nav-buttons">
-          https://www.tiktok.com/@adamishh"
+          <a
+            href="https://www.tiktok.com/@adamishh"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-pill btn-glass tilt"
@@ -82,7 +89,8 @@ export default function Home() {
             <span>TikTok</span>
           </a>
 
-          9Wf9CVXWmr"
+          <a
+            href="https://discord.gg/9Wf9CVXWmr"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-pill btn-glass tilt"
@@ -92,20 +100,9 @@ export default function Home() {
         </div>
       </div>
 
-      ffmpeg/ffmpeg.js"
+      /ffmpeg/ffmpeg.js      /mp4-container-patcher.jsfx.js"
         strategy="afterInteractive"
       />
 
-      /mp4-container-patcher.js="/sfx.js"
-        strategy="afterInteractive"
-      />
-
-      /interactions.js strategy="afterInteractive"
-      />
-
-      .js"
-        strategy="afterInteractive"
-      />
-    </>
-  );
+      /interactions.js      /popup.js  );
 }
