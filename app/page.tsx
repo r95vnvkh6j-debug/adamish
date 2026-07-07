@@ -88,7 +88,8 @@ export default function Home() {
         </div>
 
         <div className="nav-buttons">
-          www.tiktok.com/@adamishh"
+          <a
+            href="https://www.tiktok.com/@adamishh"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-pill btn-glass tilt"
@@ -107,20 +108,25 @@ export default function Home() {
         </div>
       </main>
 
-      /ffmpeg/ffmpeg.jsScript
+      <Script
+        src="/ffmpeg/ffmpeg.js"
+        strategy="afterInteractive"
+      />
+
+      <Script
         src="/mp4-container-patcher.js"
         strategy="afterInteractive"
       />
 
-      "
+      <Script
+        src="/interactions.js"
         strategy="afterInteractive"
       />
 
-      /interactions.jsScript
+      <Script
         src="/popup.js"
         strategy="afterInteractive"
       />
     </>
   );
 }
-      
