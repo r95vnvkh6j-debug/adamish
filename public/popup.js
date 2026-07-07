@@ -33,7 +33,6 @@ if (!window.FFmpegWASM) {
   return;
 }
 
-const { FFmpeg } = window.FFmpegWASM;
 
   const { FFmpeg } = window.FFmpegWASM || {};
   const ffmpeg = FFmpeg ? new FFmpeg() : null;
