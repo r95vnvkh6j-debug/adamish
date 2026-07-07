@@ -9,9 +9,9 @@ export default function Home() {
       <div className="grain"></div>
       <div className="cursor-glow" id="cursor-glow"></div>
 
-      <main className="container">
+      <div className="container">
         <header>
-          <p className="wordmark">Adamish</p>
+          <p className="wordmark">Krypton</p>
 
           <h1>
             No More Compression
@@ -32,8 +32,8 @@ export default function Home() {
             <p>or</p>
 
             <button
-              id="browse-btn"
               className="btn-pill btn-primary"
+              id="browse-btn"
             >
               <span>Browse Files</span>
             </button>
@@ -46,10 +46,7 @@ export default function Home() {
             />
           </div>
 
-          <div
-            id="processing-state"
-            className="hidden"
-          >
+          <div id="processing-state" className="hidden">
             <div className="spinner"></div>
 
             <h3 id="status-text">
@@ -60,18 +57,11 @@ export default function Home() {
               <div
                 id="progress-bar"
                 className="progress-bar"
-              ></div>
+              />
             </div>
           </div>
 
-          <div
-            id="success-state"
-            className="hidden"
-          >
-            <div className="success-icon">
-              ✅
-            </div>
-
+          <div id="success-state" className="hidden">
             <h3>Processing Complete</h3>
 
             <button
@@ -83,48 +73,54 @@ export default function Home() {
           </div>
         </div>
 
+        {/* Video Information */}
+        <div className="glass-panel video-info" id="video-info">
+          <h3>Video Information</h3>
+
+          <div className="info-grid">
+            <div className="info-item">
+              <span>Resolution</span>
+              <strong id="resolution">-</strong>
+            </div>
+
+            <div className="info-item">
+              <span>FPS</span>
+              <strong id="fps">-</strong>
+            </div>
+
+            <div className="info-item">
+              <span>Bitrate</span>
+              <strong id="bitrate">-</strong>
+            </div>
+
+            <div className="info-item">
+              <span>Codec</span>
+              <strong id="codec">-</strong>
+            </div>
+
+            <div className="info-item">
+              <span>HDR Detected</span>
+              <strong id="hdr">-</strong>
+            </div>
+
+            <div className="info-item">
+              <span>File Size</span>
+              <strong id="filesize">-</strong>
+            </div>
+          </div>
+        </div>
+
         <div className="divider">
           <span>Community</span>
         </div>
 
         <div className="nav-buttons">
-          <a
-            href="https://www.tiktok.com/@adamishh"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-pill btn-glass tilt"
-          >
-            <span>TikTok</span>
-          </a>
-
-          <a
-            href="https://discord.gg/9Wf9CVXWmr"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-pill btn-glass tilt"
-          >
-            <span>Discord</span>
-          </a>
+          {/* Lägg dina knappar här */}
         </div>
-      </main>
+      </div>
 
       <Script
         src="/ffmpeg/ffmpeg.js"
-        strategy="afterInteractive"
-      />
-
-      <Script
-        src="/mp4-container-patcher.js"
-        strategy="afterInteractive"
-      />
-
-      <Script
-        src="/interactions.js"
-        strategy="afterInteractive"
-      />
-
-      <Script
-        src="/popup.js"
         strategy="afterInteractive"
       />
     </>
