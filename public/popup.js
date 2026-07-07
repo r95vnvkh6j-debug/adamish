@@ -3,7 +3,13 @@
   const browseBtn = document.getElementById("browse-btn");
   const fileInput = document.getElementById("file-input");
 
-
+const resolutionEl = document.getElementById("resolution");
+const fpsEl = document.getElementById("fps");
+const bitrateEl = document.getElementById("bitrate");
+const codecEl = document.getElementById("codec");
+const hdrEl = document.getElementById("hdr");
+const filesizeEl = document.getElementById("filesize");
+  
   const uploadContent = document.getElementById("upload-content");
   const processingState = document.getElementById("processing-state");
   const successState = document.getElementById("success-state");
