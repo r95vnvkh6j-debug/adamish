@@ -31,10 +31,11 @@ export default function Home() {
 
             <p>or</p>
 
-            <button
-              className="btn-pill btn-primary"
-              id="browse-btn"
-            >
+           <button
+  type="button"
+  className="btn-pill btn-primary"
+  id="browse-btn"
+>
               <span>Browse Files</span>
             </button>
 
