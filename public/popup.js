@@ -87,10 +87,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (!ffmpeg.loaded) {
         statusText.innerText = "Loading engine...";
-        await ffmpeg.load({
-          coreURL: chrome.runtime.getURL("ffmpeg/ffmpeg-core.js"),
-          wasmURL: chrome.runtime.getURL("ffmpeg/ffmpeg-core.wasm"),
+      
+          await ffmpeg.load({
+       coreURL: "/ffmpeg/ffmpeg-core.js",
+        wasmURL: "/ffmpeg/ffmpeg-core.wasm",
         });
+
       }
 
       setProgress(8, "Reading video info...");
@@ -187,13 +189,17 @@ document.addEventListener("DOMContentLoaded", () => {
     }));
   }
 
-  function triggerDownload(url, filename) {
-    chrome.downloads.download({
-      url,
-      filename,
-      saveAs: true,
-    });
-  }
+ 
+function triggerDownload(url, filename) {
+  const link = document.createElement("a");
+
+  link.href = url;
+  link.download = filename;
+
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
 
   downloadBtn.addEventListener("click", () => {
     if (processedVideoUrl) {
